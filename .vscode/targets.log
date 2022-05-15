@@ -2,49 +2,30 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target 'all'.  Stop.
 
 # GNU Make 4.3
- 
 # Built for x86_64-pc-linux-gnu
- 
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
- 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
- 
 # This is free software: you are free to change and redistribute it.
- 
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
- 
-# Make data base, printed on Sun May 15 20:30:42 2022
- 
+# Make data base, printed on Sun May 15 22:35:27 2022
 
 # Variables
- 
 
- 
 # environment
- 
 GDK_BACKEND = x11
- 
 # environment
- 
 LC_ALL = C
- 
 # environment
- 
 GNOME_SHELL_SESSION_MODE = ubuntu
- 
 # environment
- 
 SSH_AGENT_LAUNCHER = gnome-keyring
- 
 # environment
- 
 SNAP_INSTANCE_KEY = 
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-56b0315f-06be-4265-a813-986f5ed37971.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e6383b4d-be51-4d43-aa06-0e5e6b7ac800.sock
 # environment
 VSCODE_CWD = /home/kirill
 # default
@@ -116,7 +97,6 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # makefile (from 'Makefile', line 1)
- 
 MAKEFILE_LIST := Makefile
 # environment
 SNAP_REEXEC = 
@@ -125,7 +105,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2764
+VSCODE_PID = 6952
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -235,7 +215,7 @@ SNAP_CONTEXT = VYapbnRLuMpWByPxPLxm_RIx4Dbgt1U1ctIMcCm7dY54cgKISHtT
 # environment
 MANAGERPID = 1418
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2719
+GIO_LAUNCHED_DESKTOP_FILE_PID = 6907
 # environment
 _ = /snap/code/96/usr/share/code/code
 # environment
@@ -299,6 +279,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # variable set hash-table stats:
 # Load=132/1024=13%, Rehash=0, Collisions=8/174=5%
 
+ 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
@@ -306,17 +287,17 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Directories
 
 # . (device 2051, inode 1863817): 13 files, no impossibilities.
-# sources (device 2051, inode 131091): 3 files, no impossibilities.
+# sources (device 2051, inode 131091): 6 files, no impossibilities.
 
-# 16 files, no impossibilities in 2 directories.
+# 19 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
-%.o: %.cpp
+%.o: %.cpp sources/OrgChart.hpp
 #  recipe to execute (from 'Makefile', line 32):
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
-objects/%.o: sources/%.cpp
+objects/%.o: sources/%.cpp sources/OrgChart.hpp
 #  recipe to execute (from 'Makefile', line 35):
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
@@ -360,6 +341,18 @@ valgrind: demo test
 	valgrind --tool=memcheck $(VALGRIND_FLAGS) ./test 2>&1 | { egrep "lost| at " || true; }
 
 # Not a target:
+objects/test.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+objects/OrgChart.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -385,18 +378,17 @@ TestCounter.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-test: TestCounter.o Test.o
+test: TestCounter.o Test.o objects/OrgChart.o objects/test.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 22):
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
-demo: Demo.o
+demo: Demo.o objects/OrgChart.o objects/test.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 19):
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
@@ -407,19 +399,19 @@ Test.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=13/1024=1%, Rehash=0, Collisions=0/30=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/36=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 31 / storage = 259 B / avg = 8 B
-# current buf: size = 8162 B / used = 259 B / count = 31 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 37 / storage = 349 B / avg = 9 B
+# current buf: size = 8162 B / used = 349 B / count = 37 / avg = 9 B
 
-# strcache performance: lookups = 48 / hit rate = 35%
+# strcache performance: lookups = 57 / hit rate = 35%
 # hash-table stats:
-# Load=31/8192=0%, Rehash=0, Collisions=0/48=0%
-# Finished Make data base on Sun May 15 20:30:42 2022
+# Load=37/8192=0%, Rehash=0, Collisions=0/57=0%
+# Finished Make data base on Sun May 15 22:35:27 2022
 
  
