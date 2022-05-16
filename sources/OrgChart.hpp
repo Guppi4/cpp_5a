@@ -17,7 +17,9 @@ namespace ariel
             map<string, string> subs;
         };
         Node* root;
+       
     public:
+        string root_name;
         OrgChart();
         OrgChart &add_root(string root);
         OrgChart &add_sub(string root, string sub);
@@ -30,5 +32,6 @@ namespace ariel
         vector<string>::iterator begin();
         vector<string>::iterator end();
         friend ostream &operator<<(ostream &out, const OrgChart &p);
+        string getroot();
     };
 }

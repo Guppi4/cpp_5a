@@ -17,6 +17,7 @@ OrgChart::OrgChart() {}
 
 OrgChart &OrgChart::add_root(string root)
 {
+     root_name=root;
      if (root=="No")
         {
             throw runtime_error("root not exist");
@@ -26,6 +27,10 @@ OrgChart &OrgChart::add_root(string root)
 
 OrgChart &OrgChart::add_sub(string root, string sub)
 {
+     if (root=="NO")
+        {
+            throw runtime_error("root not exist");
+        }
     return *this;
 }
 
@@ -71,4 +76,7 @@ vector<string>::iterator OrgChart::end()
 ostream &ariel::operator<<(ostream &out, const OrgChart &p)
 {
     return out;
+}
+string OrgChart::getroot(){
+    return root_name;
 }

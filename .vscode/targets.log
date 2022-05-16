@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun May 15 22:35:27 2022
+# Make data base, printed on Mon May 16 17:02:12 2022
 
 # Variables
 
@@ -25,7 +25,7 @@ SNAP_INSTANCE_KEY =
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-e6383b4d-be51-4d43-aa06-0e5e6b7ac800.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-240d3c72-e07a-4397-97ff-a0e33e9efc56.sock
 # environment
 VSCODE_CWD = /home/kirill
 # default
@@ -63,7 +63,7 @@ VSCODE_CODE_CACHE_PATH = /home/kirill/.config/Code/CachedData/da15b6fd3ef856477b
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.3NR7L1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.TF8MM1
 # default
 .LOADED := 
 # default
@@ -105,7 +105,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 6952
+VSCODE_PID = 2450
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -113,7 +113,7 @@ XDG_SESSION_TYPE = wayland
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/kirill-VirtualBox:@/tmp/.ICE-unix/1568,unix/kirill-VirtualBox:/tmp/.ICE-unix/1568
+SESSION_MANAGER = local/kirill-VirtualBox:@/tmp/.ICE-unix/1530,unix/kirill-VirtualBox:/tmp/.ICE-unix/1530
 # automatic
 *F = $(notdir $*)
 # environment
@@ -161,7 +161,7 @@ SNAP_USER_COMMON = /home/kirill/snap/code/common
 # environment
 SNAP = /snap/code/96
 # environment
-INVOCATION_ID = 60d6733fc1c343f0ab50fd79fe061582
+INVOCATION_ID = 37bd4f4ef2fd4e71922182ed8504c835
 # environment
 SNAP_REVISION = 96
 # environment
@@ -213,9 +213,9 @@ SNAP_DATA = /var/snap/code/96
 # environment
 SNAP_CONTEXT = VYapbnRLuMpWByPxPLxm_RIx4Dbgt1U1ctIMcCm7dY54cgKISHtT
 # environment
-MANAGERPID = 1418
+MANAGERPID = 1394
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6907
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2402
 # environment
 _ = /snap/code/96/usr/share/code/code
 # environment
@@ -223,7 +223,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/kirill/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:23081
+JOURNAL_STREAM = 8:23809
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -412,6 +412,6 @@ Test.o:
 # strcache performance: lookups = 57 / hit rate = 35%
 # hash-table stats:
 # Load=37/8192=0%, Rehash=0, Collisions=0/57=0%
-# Finished Make data base on Sun May 15 22:35:27 2022
+# Finished Make data base on Mon May 16 17:02:13 2022
 
  
